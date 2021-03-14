@@ -47,6 +47,9 @@ mainCyclist  = createSprite(70,150);
 mainCyclist.addAnimation("SahilRunning",mainRacerImg1);
 mainCyclist.scale=0.07;
   
+//set collider for mainCyclist
+mainCyclist.setCollider("rectangle",0,0,40,40);
+  
 gameOver = createSprite(650,150);
 gameOver.addImage(gameOverImg);
 gameOver.scale = 0.8;
@@ -119,6 +122,7 @@ function draw() {
     
 }else if (gameState === END) {
     gameOver.visible = true;
+  
     textSize(20);
     fill(255);
     text("Press Up Arrow to Restart the game!", 500,200);
